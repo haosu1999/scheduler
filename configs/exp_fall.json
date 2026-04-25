@@ -1,0 +1,7 @@
+{
+  "task_type": "abnormal_behavior_detection",
+  "class_name": "fall",
+  "dataset": "datasets/fall",
+  "model": "YOLOv8-demo",
+  "note": "跌倒行为识别实验配置示例"
+}

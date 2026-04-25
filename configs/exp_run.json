@@ -1,0 +1,7 @@
+{
+  "task_type": "abnormal_behavior_detection",
+  "class_name": "running",
+  "dataset": "datasets/running",
+  "model": "YOLOv8-demo",
+  "note": "奔跑行为识别实验配置示例"
+}

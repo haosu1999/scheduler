@@ -1,0 +1,51 @@
+{
+  "description": "多显卡并行执行示例：Python 调用 shell 脚本，shell 读取本 JSON；根据 gpu_ids 启动多个 worker，每张显卡串行执行自己分到的任务，多张显卡之间同时运行。",
+  "global": {
+    "train_script": "src/train_demo.py",
+    "gpu_ids": [
+      "0",
+      "1"
+    ],
+    "log_dir": "logs/multi_gpu",
+    "output_root": "outputs/multi_gpu",
+    "stop_on_error": true
+  },
+  "tasks": [
+    {
+      "name": "fight_detection_exp",
+      "enabled": true,
+      "config": "configs/exp_fight.json",
+      "epochs": 4,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "output_dir": "outputs/multi_gpu/fight_detection_exp"
+    },
+    {
+      "name": "fall_detection_exp",
+      "enabled": true,
+      "config": "configs/exp_fall.json",
+      "epochs": 4,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "output_dir": "outputs/multi_gpu/fall_detection_exp"
+    },
+    {
+      "name": "running_detection_exp",
+      "enabled": true,
+      "config": "configs/exp_run.json",
+      "epochs": 4,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "output_dir": "outputs/multi_gpu/running_detection_exp"
+    },
+    {
+      "name": "loitering_detection_exp",
+      "enabled": true,
+      "config": "configs/exp_loitering.json",
+      "epochs": 4,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "output_dir": "outputs/multi_gpu/loitering_detection_exp"
+    }
+  ]
+}

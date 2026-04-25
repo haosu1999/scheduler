@@ -1,0 +1,7 @@
+{
+  "task_type": "abnormal_behavior_detection",
+  "class_name": "loitering",
+  "dataset": "datasets/loitering",
+  "model": "YOLOv8-demo",
+  "note": "徘徊行为识别实验配置示例"
+}

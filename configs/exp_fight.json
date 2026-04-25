@@ -1,0 +1,7 @@
+{
+  "task_type": "abnormal_behavior_detection",
+  "class_name": "fight",
+  "dataset": "datasets/fight",
+  "model": "YOLOv8-demo",
+  "note": "打架斗殴行为识别实验配置示例"
+}

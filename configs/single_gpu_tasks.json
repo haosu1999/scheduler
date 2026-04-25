@@ -1,0 +1,48 @@
+{
+  "description": "单显卡串行执行示例：Python 调用 shell 脚本，shell 读取本 JSON，将多个任务按顺序依次执行。",
+  "global": {
+    "train_script": "src/train_demo.py",
+    "gpu_id": "0",
+    "log_dir": "logs/single_gpu",
+    "output_root": "outputs/single_gpu",
+    "stop_on_error": true
+  },
+  "tasks": [
+    {
+      "name": "fight_detection_exp",
+      "enabled": true,
+      "config": "configs/exp_fight.json",
+      "epochs": 4,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "output_dir": "outputs/single_gpu/fight_detection_exp"
+    },
+    {
+      "name": "fall_detection_exp",
+      "enabled": true,
+      "config": "configs/exp_fall.json",
+      "epochs": 4,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "output_dir": "outputs/single_gpu/fall_detection_exp"
+    },
+    {
+      "name": "running_detection_exp",
+      "enabled": true,
+      "config": "configs/exp_run.json",
+      "epochs": 4,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "output_dir": "outputs/single_gpu/running_detection_exp"
+    },
+    {
+      "name": "loitering_detection_exp",
+      "enabled": true,
+      "config": "configs/exp_loitering.json",
+      "epochs": 4,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "output_dir": "outputs/single_gpu/loitering_detection_exp"
+    }
+  ]
+}
